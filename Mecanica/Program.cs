@@ -12,8 +12,8 @@ namespace Mecanica
             Console.WriteLine("1 - Agenda");
             Console.WriteLine("2 - Clientes");
             Console.WriteLine("3 - Funcionarios");
-            Console.WriteLine("5 - Relatorios");
-            Console.WriteLine("4 - Servicos");         
+            Console.WriteLine("4 - Relatorios");
+            Console.WriteLine("5 - Servicos");         
             Console.WriteLine("6 - Sair");
             Console.WriteLine("----------------------------------------------");
 
@@ -25,6 +25,19 @@ namespace Mecanica
                 case 1:
                     Console.WriteLine("Case 1");
 
+                    break;
+                case 2:
+                    Console.WriteLine("Case 2");
+                    break;
+                case 3:
+                    Console.WriteLine("Case 1");
+
+                    break;
+                case 4:
+                    Console.WriteLine("Case 2");
+                    break;
+                case 5:
+                    Console.WriteLine("Case 1");
                     break;
                 case 2:
                     Console.WriteLine("Case 2");

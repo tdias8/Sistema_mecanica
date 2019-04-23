@@ -14,7 +14,7 @@ namespace Mecanica
       private DateTime dataDeNascimento;
       private char sexo;
       private string estadoCivil;
-      private Boolean ativo;
+      private Boolean ativo = true;
 
 
         public void setCpf(string cpf)
@@ -58,6 +58,39 @@ namespace Mecanica
         {
             return endereco;
         }
+         public void setDataDeNascimento(DateTime dataDeNascimento)
+        {
+            this.dataDeNascimento = dataDeNascimento;
+        }
+        public DateTime getDeNascimento()
+        {
+            return DeNascimento;
+        }
+        public void setSexo(char sexo)
+        {
+            this.sexo = sexo;
+        }
+        public string getSexo()
+        {
+            return sexo;
+        }
+        public void setEstadoCivil(string estadoCivil)
+        {
+            this.estadoCivil = estadoCivil;
+        }
+        public string getestadoCivilo()
+        {
+            return estadoCivil;
+        }
+        public void setAtivo(string ativo)
+        {
+            this.ativo = ativo;
+        }
+        public string getAtivo()
+        {
+            return ativo;
+        }
+       
     }
 
 }
