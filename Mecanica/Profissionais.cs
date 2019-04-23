@@ -6,9 +6,9 @@ namespace Mecanica
 {
     class Profissionais
     {
-        String cpf;
-        String nome;
-        int telefone;
-        String email;
+        private String cpf;
+        private String nome;
+        private int telefone;
+        private String email;
     }
 }

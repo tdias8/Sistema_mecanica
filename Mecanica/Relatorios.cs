@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Mecanica
 {
-    class Veiculo
+    class Relatorios
     {
     }
 }

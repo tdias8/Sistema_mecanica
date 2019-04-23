@@ -6,5 +6,11 @@ namespace Mecanica
 {
     class Agenda
     {
+        void Incluir()
+        {
+            private DateTime horario;
+            private Profissionais profissional;
+
+        }
     }
 }

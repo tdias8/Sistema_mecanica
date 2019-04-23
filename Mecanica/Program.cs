@@ -9,10 +9,13 @@ namespace Mecanica
             int menu;
 
             Console.WriteLine("Selecione uma opção");
-            Console.WriteLine("1 - Cadastrar Cliente");
-            Console.WriteLine("2 - Serviços");
+            Console.WriteLine("1 - Agenda");
+            Console.WriteLine("2 - Clientes");
             Console.WriteLine("3 - Funcionarios");
-            Console.WriteLine("3 - Funcionarios");
+            Console.WriteLine("5 - Relatorios");
+            Console.WriteLine("4 - Servicos");         
+            Console.WriteLine("6 - Sair");
+            Console.WriteLine("----------------------------------------------");
 
 
             menu = int.Parse(Console.ReadLine());
