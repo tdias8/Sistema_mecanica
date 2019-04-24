@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Mecanica
 {
-    class Clientes
+    class Cliente
     {
       private string cpf;
       private string nome;
@@ -62,15 +62,15 @@ namespace Mecanica
         {
             this.dataDeNascimento = dataDeNascimento;
         }
-        public DateTime getDeNascimento()
+        public DateTime getDataDeNascimento()
         {
-            return DeNascimento;
+            return dataDeNascimento;
         }
         public void setSexo(char sexo)
         {
             this.sexo = sexo;
         }
-        public string getSexo()
+        public char getSexo()
         {
             return sexo;
         }
@@ -78,15 +78,15 @@ namespace Mecanica
         {
             this.estadoCivil = estadoCivil;
         }
-        public string getestadoCivilo()
+        public string getEstadoCivil()
         {
             return estadoCivil;
         }
-        public void setAtivo(string ativo)
+        public void setAtivo(Boolean ativo)
         {
             this.ativo = ativo;
         }
-        public string getAtivo()
+        public Boolean getAtivo()
         {
             return ativo;
         }

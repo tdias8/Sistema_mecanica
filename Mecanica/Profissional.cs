@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Mecanica
 {
-    class Profissionais
+    class Profissional
     {
         private String cpf;
         private String nome;
@@ -15,9 +15,9 @@ namespace Mecanica
         {
             this.cpf = cpf;
         }
-        public string getEstadoCivilo()
+        public string getCpf()
         {
-            return estadoCivil;
+            return cpf;
         }
         public void setNome(string nome)
         {
@@ -35,7 +35,7 @@ namespace Mecanica
         {
             return telefone;
         }
-        public void setEmail(string emailcpf)
+        public void setEmail(string email)
         {
             this.email = email;
         }

@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Mecanica
 {
-    class Servicos
+    class Servico
     {
         private String descricao;
         private DateTime data;
         private DateTime hora;
-        private Profissionais profissionais;
-        private Clientes cliente;
+        private Profissional profissional;
+        private Cliente cliente;
         private String status;
         
 
