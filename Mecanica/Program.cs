@@ -6,6 +6,7 @@ namespace Mecanica
     {
         static void Main(string[] args)
         {
+
             int menu;
 
             Console.WriteLine("Selecione uma opção");
@@ -23,11 +24,38 @@ namespace Mecanica
             switch (menu)
             {
                 case 1:
-                    Console.WriteLine("Case 1");
-
+                   
                     break;
                 case 2:
-                    Console.WriteLine("Case 2");
+                    Console.WriteLine("Selecione uma opção");
+                    Console.WriteLine("1 - Consultar");
+                    Console.WriteLine("2 - Cadastrar");
+                    Console.WriteLine("3 - Alterar");
+                    Console.WriteLine("4 - Excluir");   
+                    Console.WriteLine("5 - Voltar");
+                    Console.WriteLine("----------------------------------------------");
+
+                   int menuCliente = int.Parse(Console.ReadLine());
+
+                    if (menuCliente = 1){
+
+                    }
+                    else if (menuCliente = 2){
+                        Console.WriteLine("Preencha os dados");
+                        Console.Write("Cpf: ");
+                        Console
+
+                    }
+                    else if (menuCliente = 3){
+
+                    }
+                    else if (menuCliente = 4){
+
+                    }
+                    else if (menuCliente = 5){
+
+                    }
+
                     break;
                 case 3:
                     Console.WriteLine("Case 1");
