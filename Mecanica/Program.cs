@@ -7,38 +7,25 @@ namespace Mecanica
         static void Main(string[] args)
         {
 
-            int menu;
+            Menu menu = new Menu();
+            int opcao;
 
-            Console.WriteLine("Selecione uma opção");
-            Console.WriteLine("1 - Agenda");
-            Console.WriteLine("2 - Clientes");
-            Console.WriteLine("3 - Funcionarios");
-            Console.WriteLine("4 - Relatorios");
-            Console.WriteLine("5 - Servicos");         
-            Console.WriteLine("6 - Sair");
-            Console.WriteLine("----------------------------------------------");
-
+            Console.WriteLine(menu.menuInicial());
             Cliente cli1 = new Cliente();
             Cliente cli2 = new Cliente();
             Profissional prof1 = new Profissional();
             Profissional prof2 = new Profissional();
 
-            menu = int.Parse(Console.ReadLine());
+            opcao = int.Parse(Console.ReadLine());
 
-            switch (menu)
+            switch (opcao)
             {
                 case 1:
                    
                     break;
                 case 2:
                     Console.Clear();
-                    Console.WriteLine("Selecione uma opção");
-                    Console.WriteLine("1 - Consultar");
-                    Console.WriteLine("2 - Cadastrar");
-                    Console.WriteLine("3 - Alterar");
-                    Console.WriteLine("4 - Excluir");   
-                    Console.WriteLine("5 - Voltar");
-                    Console.WriteLine("----------------------------------------------");
+                    Console.WriteLine(menu.menuCrud());
 
                    int menuCliente = int.Parse(Console.ReadLine());
 
@@ -134,6 +121,10 @@ namespace Mecanica
                         }
                     }
                     else if (menuCliente == 3){
+                        Console.Clear();
+                        Console.WriteLine("Selecione uma opção para alterar");
+                        Console.Write("1 - Nome: " + cli1.getNome());
+                        Console.Write("2 - Nome: " + cli2.getNome());
 
                     }
                     else if (menuCliente == 4){
@@ -230,7 +221,8 @@ namespace Mecanica
                     }
                     else if (menuFuncionario == 5)
                     {
-                        return;
+                        Console.WriteLine(menu.menuInicial());
+                        Console.ReadLine();
                     }
 
                     break;
