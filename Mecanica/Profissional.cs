@@ -10,6 +10,8 @@ namespace Mecanica
         private String nome;
         private int telefone;
         private String email;
+        
+
 
         public void setCpf(string cpf)
         {
@@ -43,5 +45,7 @@ namespace Mecanica
         {
             return email;
         }
+
+       
     }
 }

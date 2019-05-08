@@ -6,23 +6,29 @@ namespace Mecanica
 {
     class Cliente
     {
-      private string cpf;
-      private string nome;
-      private int telefone;
-      private string email;
-      private string endereco;
-      private DateTime dataDeNascimento;
-      private char sexo;
-      private string estadoCivil;
-      private Boolean ativo = true;
+        private int id;
+        private string cpf;
+        private string nome;
+        private int telefone;
+        private string email;
+        private string endereco;
+        private string dataDeNascimento;
+        private char sexo;
+        private string estadoCivil;
+        private Boolean ativo = true;
 
+
+        public void setId(int id)
+        {
+            this.id = id++;
+        }
 
         public void setCpf(string cpf)
         {
             this.cpf = cpf;
         }
-        
-        public string getCpf ()
+
+        public string getCpf()
         {
             return cpf;
         }
@@ -58,11 +64,11 @@ namespace Mecanica
         {
             return endereco;
         }
-         public void setDataDeNascimento(DateTime dataDeNascimento)
+        public void setDataDeNascimento(string dataDeNascimento)
         {
             this.dataDeNascimento = dataDeNascimento;
         }
-        public DateTime getDataDeNascimento()
+        public string getDataDeNascimento()
         {
             return dataDeNascimento;
         }
@@ -90,7 +96,6 @@ namespace Mecanica
         {
             return ativo;
         }
-       
-    }
 
+    }
 }
