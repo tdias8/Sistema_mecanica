@@ -23,7 +23,7 @@ namespace Mecanica
             Console.WriteLine("1 - Consultar");
             Console.WriteLine("2 - Cadastrar");
             Console.WriteLine("3 - Alterar");
-            Console.WriteLine("4 - Excluir");
+            Console.WriteLine("4 - Cancelar");
             Console.WriteLine("5 - Voltar");
             Console.WriteLine("----------------------------------------------");
             int menu = int.Parse(Console.ReadLine());
@@ -179,6 +179,10 @@ namespace Mecanica
 
             menuServico();
 
+        }
+        public int consultaTamnhoLista()
+        {
+            return tamanhoLista;
         }
     }
 }

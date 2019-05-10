@@ -6,21 +6,44 @@ namespace Mecanica
 {
     class Agenda
     {
-        string[,] agenda = new string[5,5];
+        string[] agenda = new string[5];
+        
 
 
+        MenuProfissional prof = new MenuProfissional();
+        
+        public void populaAgenda()
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                if (agenda[i] == null)
+                {
+                    agenda[i] = "LIVRE";
+                }
+            }
+        }
         public void consultaAgenda()
         {
-            agenda[0, 1] = "8";
-            agenda[0, 2] = "10";
-            agenda[0, 3] = "14";
-            agenda[0, 4] = "16";
-            agenda[0, 1] = "8";
-            agenda[0, 2] = "10";
-            agenda[0, 3] = "14";
-            agenda[0, 4] = "16";
+            string[] listaAgenda = new string[prof.consultaTamnhoLista()]; 
+            Console.Clear();
+            populaAgenda();
+            for (int i = 0; i <= prof.consultaTamnhoLista(); i++)
+            {
+                Console.WriteLine("Profissional " + i);
+                Console.WriteLine("----------------SEGUNDA  TERCA   QUARTA  QUINTA  SEXTA----------------");
+
+                for (int j = 0; j <= prof.consultaTamnhoLista(); j++)
+                {
+
+                    
+                    Console.WriteLine("8H " + "1-" + agenda[0] + " " + "2-" + agenda[1] + "  " + "3-" + agenda[2] + "  " + "4-" + agenda[3] + " " + "5-" + agenda[4]);
+                    Console.WriteLine("10H " + "1-" + agenda[0] + " " + "2-" + agenda[1] + "  " + "3-" + agenda[2] + "  " + "4-" + agenda[3] + " " + "5-" + agenda[4]);
+                    Console.WriteLine("14H " + "1-" + agenda[0] + " " + "2-" + agenda[1] + "  " + "3-" + agenda[2] + "  " + "4-" + agenda[3] + " " + "5-" + agenda[4]);
+                    Console.WriteLine("16H " + "1-" + agenda[0] + " " + "2-" + agenda[1] + "  " + "3-" + agenda[2] + "  " + "4-" + agenda[3] + " " + "5-" + agenda[4]);
+                   
+                }
+            }
             Console.ReadLine();
-            
         }
         public void marcarHora()
         {
@@ -28,7 +51,14 @@ namespace Mecanica
             char resp = char.Parse(Console.ReadLine());
             if (resp == 's')
             {
-                Console.WriteLine("Deseja marcar um horario ? S/N ");
+                Console.Write("Selecione o profissional: ");
+                Console.Write(": ");
+
+            }
+            else
+            {
+                Console.WriteLine("Pressione enter para retornar ao menu principal");
+                Console.ReadLine();
             }
         }
 

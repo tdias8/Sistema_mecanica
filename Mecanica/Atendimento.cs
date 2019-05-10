@@ -55,12 +55,12 @@ namespace Mecanica
         }
         public void setStatus(int codStatus)
         {
-            if (codStatus == '2' )
+            if (codStatus == 2 )
             {
                 this.status = "Realizado";
 
             }
-            else if (codStatus == '3')
+            else if (codStatus == 3)
             {
                 this.status = "Cancelado";
 

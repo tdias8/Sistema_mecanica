@@ -153,5 +153,9 @@ namespace Mecanica
             menuProfissional();
 
         }
+        public int consultaTamnhoLista()
+        {
+            return tamanhoLista;
+        }
     }
 }

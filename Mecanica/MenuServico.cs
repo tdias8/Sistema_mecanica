@@ -110,9 +110,9 @@ namespace Mecanica
         void alterarServico()
         {
             Console.Clear();
-            if (tamanhoLista > 0)
+            if (consultaTamnhoLista() > 0)
             {
-                for (int i = 0; i < tamanhoLista; i++)
+                for (int i = 0; i < consultaTamnhoLista(); i++)
                 {
 
                     Console.WriteLine("id: " + i);
@@ -140,6 +140,10 @@ namespace Mecanica
 
             menuServico();
 
+        }
+        public int consultaTamnhoLista()
+        {
+            return tamanhoLista;
         }
     }
 }

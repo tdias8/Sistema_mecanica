@@ -206,5 +206,10 @@ namespace Mecanica
                 Console.ReadLine();
                 menuCliente();
             }
+        public int consultaTamnhoLista()
+        {
+            return tamanhoLista;
         }
+    }
+
     }
