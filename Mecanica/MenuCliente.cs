@@ -6,10 +6,10 @@ namespace Mecanica
 {
     class MenuCliente
     {
-        Cliente cli = new Cliente();
-        List<Cliente> listaDeClientes = new List<Cliente>();
-        int tamanhoLista = 0;
-        
+        private Cliente cli = new Cliente();
+        private List <Cliente> listaDeClientes = new List<Cliente>();
+        private int tamanhoLista = 0;
+
         public void menuCliente()
         {
             Console.Clear();
@@ -87,8 +87,8 @@ namespace Mecanica
                 Console.ReadLine();
                 menuCliente();
             }
-
-            void consultarCliente()
+        }
+          public  void consultarCliente()
             {
                 Console.Clear();
                 if (tamanhoLista > 0)
@@ -208,5 +208,3 @@ namespace Mecanica
             }
         }
     }
-}
-

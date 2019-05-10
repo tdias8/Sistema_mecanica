@@ -4,16 +4,17 @@ using System.Text;
 
 namespace Mecanica
 {
-    class MenuServico
+    class MenuAtendimento
     {
-        private Profissional prof = new Profissional();
+       private Profissional prof = new Profissional();
         private Cliente cli = new Cliente();
-        private Servico serv = new Servico();
-        private List<Servico> listaDeServicos = new List<Servico>();
-       
+        private Atendimento aten = new Atendimento();
+        private List<Cliente> listaDeClientes = new List<Cliente>();
+        private List<Atendimento> listaDeServicos = new List<Atendimento>();
+        private List<Profissional> listaDeProfissional = new List<Profissional>();
 
-        private int tamanhoLista;
-        private int opcao;
+        int tamanhoLista;
+        int opcao;
 
         public void menuServico()
         {
@@ -55,14 +56,17 @@ namespace Mecanica
        public void consultarServico()
         {
             Console.Clear();
-
-            //tamanhoLista = listaDeServicos.Count;
             if (tamanhoLista > 0)
             {
                 for (int i = 0; i < tamanhoLista; i++)
                 {
                     Console.WriteLine("id: " + i);
+                    Console.WriteLine("Data: " + listaDeServicos[i].getData());
+                    Console.WriteLine("Hora: " + listaDeServicos[i].getHora());
+                    Console.WriteLine("Cliente: " + listaDeServicos[i].getCliente());
                     Console.WriteLine("Descricao: " + listaDeServicos[i].getDescricao());
+                    Console.WriteLine("Profissional: " + listaDeServicos[i].getProfissional());
+                    Console.WriteLine("Status: " + listaDeServicos[i].getStatus());
 
                 }
             }
@@ -77,12 +81,24 @@ namespace Mecanica
         void inserirServico()
         {
             Console.WriteLine("Preencha os dados");
-            
+            Console.Write("Data: ");
+            string data = (Console.ReadLine());
+            aten.setData(data);
+            Console.Write("Hora: ");
+            string hora = (Console.ReadLine());
+            aten.setHora(hora);
+            Console.Write("Cliente: ");
+            string cliente = (Console.ReadLine());
+            aten.setCliente(cliente);
             Console.Write("Descricao: ");
             string descricao = (Console.ReadLine());
-            serv.setDescricao(descricao);
-            listaDeServicos.Add(serv);
+            aten.setDescricao(descricao);
+            Console.Write("Profissional: ");
+            string profissional = (Console.ReadLine());
+            aten.setProfissional(profissional);
+            aten.setStatus(1);
             tamanhoLista++;
+            listaDeServicos.Add(aten);
             Console.WriteLine("Pressione enter para retornar ao menu principal");
             Console.ReadLine();
             menuServico();
@@ -94,13 +110,18 @@ namespace Mecanica
             for (int i = 0; i < tamanhoLista; i++)
             {
                 Console.WriteLine("id: " + i);
+                Console.WriteLine("Data: " + listaDeServicos[i].getData());
+                Console.WriteLine("Hora: " + listaDeServicos[i].getHora());
+                Console.WriteLine("Cliente: " + listaDeServicos[i].getCliente());
                 Console.WriteLine("Descricao: " + listaDeServicos[i].getDescricao());
+                Console.WriteLine("Profissional: " + listaDeServicos[i].getProfissional());
+                Console.WriteLine("Status: " + listaDeServicos[i].getStatus());
                 Console.WriteLine("-------------------------------------------------------");
             }
             Console.WriteLine("Selecione o ID para cancelar");
             opcao = int.Parse(Console.ReadLine());
-            listaDeServicos.RemoveAt(opcao);
-            Console.WriteLine("Servico removido ! ");
+            listaDeServicos[opcao].setStatus(3);
+            Console.WriteLine("Servico cancelado ! ");
             Console.WriteLine("Pressione enter para retornar ao menu principal");
             Console.ReadLine();
             Console.ReadLine();
@@ -116,7 +137,12 @@ namespace Mecanica
                 {
 
                     Console.WriteLine("id: " + i);
+                    Console.WriteLine("Data: " + listaDeServicos[i].getData());
+                    Console.WriteLine("Hora: " + listaDeServicos[i].getHora());
+                    Console.WriteLine("Cliente: " + listaDeServicos[i].getCliente());
                     Console.WriteLine("Descricao: " + listaDeServicos[i].getDescricao());
+                    Console.WriteLine("Profissional: " + listaDeServicos[i].getProfissional());
+                    Console.WriteLine("Status: " + listaDeServicos[i].getStatus());
                     Console.WriteLine("-------------------------------------------------------");
                 }
             }
@@ -131,9 +157,22 @@ namespace Mecanica
             Console.WriteLine("Selecione o ID para alterar");
             opcao = int.Parse(Console.ReadLine());
             Console.WriteLine("Preencha os dados");
+            Console.Write("Data: ");
+            string data = (Console.ReadLine());
+            aten.setData(data);
+            Console.Write("Hora: ");
+            string hora = (Console.ReadLine());
+            aten.setHora(hora);
+            Console.Write("Cliente: ");
+            string cliente = (Console.ReadLine());
+            aten.setCliente(cliente);
             Console.Write("Descricao: ");
             string descricao = (Console.ReadLine());
-            serv.setDescricao(descricao);
+            aten.setDescricao(descricao);
+            Console.Write("Profissional: ");
+            string profissional = (Console.ReadLine());
+            aten.setProfissional(profissional);
+            aten.setStatus(1);
             Console.WriteLine("Cadastro alterado ! ");
             Console.WriteLine("Pressione enter para retornar ao menu principal");
             Console.ReadLine();

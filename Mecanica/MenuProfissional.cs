@@ -6,11 +6,11 @@ namespace Mecanica
 {
     class MenuProfissional
     {
-        Profissional prof = new Profissional();
-        List<Profissional> listaDeProfissionais = new List<Profissional>();
-        
-        int tamanhoLista;
-        int opcao;
+        private Profissional prof = new Profissional();
+        private List<Profissional> listaDeProfissionais = new List<Profissional>();
+
+        private int tamanhoLista;
+        private int opcao;
 
         public void menuProfissional()
         {
@@ -49,17 +49,17 @@ namespace Mecanica
             }
         }
 
-         void consultarProfissional()
+       public  void consultarProfissional()
         {
             Console.Clear();
             if (tamanhoLista > 0)
             {
                 for (int i = 0; i < tamanhoLista; i++)
             {
-                Console.Write("Cpf: " + listaDeProfissionais[i].getCpf());
-                Console.Write("Nome: " + listaDeProfissionais[i].getNome());
-                Console.Write("Telefone: " + listaDeProfissionais[i].getTelefone());
-                Console.Write("Email: " + listaDeProfissionais[i].getEmail());
+                Console.WriteLine("Cpf: " + listaDeProfissionais[i].getCpf());
+                Console.WriteLine("Nome: " + listaDeProfissionais[i].getNome());
+                Console.WriteLine("Telefone: " + listaDeProfissionais[i].getTelefone());
+                Console.WriteLine("Email: " + listaDeProfissionais[i].getEmail());
 
             }
             }
@@ -86,6 +86,7 @@ namespace Mecanica
             Console.Write("Email: ");
             string email = (Console.ReadLine());
             prof.setEmail(email);
+            listaDeProfissionais.Add(prof);
             tamanhoLista++;
             Console.WriteLine("Pressione enter para retornar ao menu principal");
             Console.ReadLine();
